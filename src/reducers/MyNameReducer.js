@@ -5,12 +5,11 @@ const MyName = (state = {}, action) => {
     
       switch (action.type) {
         case 'CHANGE_NAME':
-          return [
+          return {
             ...state,
-            {
               myNewName: action.myNewName
             }
-          ]
+          
         default:
           return state
       }
